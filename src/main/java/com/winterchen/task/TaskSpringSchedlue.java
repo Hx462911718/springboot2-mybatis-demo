@@ -16,9 +16,9 @@ public class TaskSpringSchedlue {
     @Autowired
     private UserService userService;
 
-    @Scheduled(cron = "0 0/1 * * * ?")
-    public void insertUser(){
-        UserDomain user = new UserDomain();
-        userService.addUser(user);
-    }
+//    @Scheduled(cron = "0 0/1 * * * ?")
+//    public void insertUser(){
+//        UserDomain user = new UserDomain();
+//        userService.addUser(user);
+//    }
 }

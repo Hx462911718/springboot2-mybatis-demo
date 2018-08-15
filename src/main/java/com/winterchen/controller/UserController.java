@@ -15,12 +15,18 @@ import org.springframework.web.bind.annotation.*;
  * Created by Administrator on 2017/8/16.
  */
 @Api(value = "用户模块")
-@RestController
-@RequestMapping(value = "/user")
+@Controller
+@RequestMapping(value = "/user/")
 public class UserController {
 
     @Autowired
     private UserService UserService;
+
+    @RequestMapping({"","/"})
+    public String test(){
+        return "index2";
+    }
+
 
     @ApiOperation(value = "新增用户",notes = "添加一个新用户")
     @ApiImplicitParam(name = "user",value = "用户数据",required = true,paramType = "body",dataType = "UserDomain")
